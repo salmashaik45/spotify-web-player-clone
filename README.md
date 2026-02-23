@@ -2,6 +2,9 @@
 
 A responsive Spotify Web Player UI clone built using HTML and CSS.
 
+## Live Demo
+https://salma-spotify-clone.netlify.app/
+
 ## Features
 - Sidebar Navigation
 - Sticky Header
