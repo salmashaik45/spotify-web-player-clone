@@ -1,3 +1,6 @@
+const progressBar = document.querySelector(".progress-bar");
+const currentTimeEl = document.querySelector(".curr-time");
+const totalTimeEl = document.querySelector(".tot-time");
 const albumCover = document.getElementById("album-cover");
 const audioPlayer = document.getElementById("audio-player");
 const playButton = document.getElementById("main-play-btn");
@@ -34,3 +37,29 @@ playButton.addEventListener("click", () => {
 audioPlayer.addEventListener("ended", () => {
     playButton.src = playIcon;
 });
+
+audioPlayer.addEventListener("timeupdate", () => {
+    if (!audioPlayer.duration) return;
+
+    const progressPercent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    progressBar.value = progressPercent;
+
+    currentTimeEl.textContent = formatTime(audioPlayer.currentTime);
+    totalTimeEl.textContent = formatTime(audioPlayer.duration);
+});
+
+progressBar.addEventListener("input", () => {
+    if (!audioPlayer.duration) return;
+
+    const seekTime = (progressBar.value / 100) * audioPlayer.duration;
+    audioPlayer.currentTime = seekTime;
+});
+
+function formatTime(time) {
+    if (isNaN(time)) return "00:00";
+
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+}
