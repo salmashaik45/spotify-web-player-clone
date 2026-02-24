@@ -6,6 +6,7 @@ const audioPlayer = document.getElementById("audio-player");
 const playButton = document.getElementById("main-play-btn");
 const albumTitle = document.querySelector(".album-title");
 const albumArtist = document.querySelector(".album-info");
+let isPlaying = false;
 
 const playIcon = "./assets/player_icon3.png";
 const pauseIcon = "./assets/player_pause.png";
