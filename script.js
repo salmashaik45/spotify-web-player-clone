@@ -7,8 +7,12 @@ const playButton = document.getElementById("main-play-btn");
 const albumTitle = document.querySelector(".album-title");
 const albumArtist = document.querySelector(".album-info");
 const volumeSlider = document.querySelector(".control-bar");
+const volumeValue = document.querySelector(".volume-value");
+
 audioPlayer.volume = 0.5; 
-volumeSlider.value = 50;    
+volumeSlider.value = 50; 
+volumeValue.textContent = "50%";
+
 let isPlaying = false;
 
 const playIcon = "./assets/player_icon3.png";
@@ -69,6 +73,8 @@ function formatTime(time) {
 }
 
 volumeSlider.addEventListener("input", () => {
-    const volumeValue = volumeSlider.value / 100;
-    audioPlayer.volume = volumeValue;
+    const volume = volumeSlider.value;
+    audioPlayer.volume = volume / 100;
+
+    volumeValue.textContent = volume + "%";
 });
