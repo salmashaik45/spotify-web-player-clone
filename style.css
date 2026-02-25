@@ -281,17 +281,17 @@ a {
 
 .album {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
   align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
 }
 
 .picture {
   height: 55px;
   width: 55px;
-  border-radius: 0.3rem;
-  margin: 0.5rem;
+  border-radius: 6px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .album-text {
