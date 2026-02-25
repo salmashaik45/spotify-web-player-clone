@@ -287,10 +287,11 @@ a {
 }
 
 .picture {
-  height: 54px;
+  height: 55px;
   width: 55px;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   margin: 0.5rem;
+  object-fit: cover;
 }
 
 .album-text {
