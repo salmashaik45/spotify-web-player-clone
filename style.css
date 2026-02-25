@@ -399,3 +399,23 @@ a {
   margin-left: 8px;
   width: 40px;
 }
+
+.volume-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.volume-tooltip {
+  position: absolute;
+  top: -25px;
+  transform: translateX(-50%);
+  background-color: #1db954;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}

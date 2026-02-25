@@ -1,19 +1,18 @@
-const progressBar = document.querySelector(".progress-bar");
-const currentTimeEl = document.querySelector(".curr-time");
-const totalTimeEl = document.querySelector(".tot-time");
-const albumCover = document.getElementById("album-cover");
 const audioPlayer = document.getElementById("audio-player");
 const playButton = document.getElementById("main-play-btn");
 const albumTitle = document.querySelector(".album-title");
 const albumArtist = document.querySelector(".album-info");
+const albumCover = document.getElementById("album-cover");
+
+const progressBar = document.querySelector(".progress-bar");
+const currentTimeEl = document.querySelector(".curr-time");
+const totalTimeEl = document.querySelector(".tot-time");
+
 const volumeSlider = document.querySelector(".control-bar");
-const volumeValue = document.querySelector(".volume-value");
+const volumeTooltip = document.querySelector(".volume-tooltip");
 
-audioPlayer.volume = 0.5; 
-volumeSlider.value = 50; 
-volumeValue.textContent = "50%";
-
-let isPlaying = false;
+audioPlayer.volume = 0.5;
+volumeSlider.value = 50;
 
 const playIcon = "./assets/player_icon3.png";
 const pauseIcon = "./assets/player_pause.png";
@@ -21,7 +20,6 @@ const pauseIcon = "./assets/player_pause.png";
 function playSong(file, title, artist, image) {
     audioPlayer.src = file;
     audioPlayer.play();
-    isPlaying = true;
 
     albumTitle.innerText = title;
     albumArtist.innerText = artist;
@@ -49,7 +47,9 @@ audioPlayer.addEventListener("ended", () => {
 audioPlayer.addEventListener("timeupdate", () => {
     if (!audioPlayer.duration) return;
 
-    const progressPercent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    const progressPercent =
+        (audioPlayer.currentTime / audioPlayer.duration) * 100;
+
     progressBar.value = progressPercent;
 
     currentTimeEl.textContent = formatTime(audioPlayer.currentTime);
@@ -59,7 +59,9 @@ audioPlayer.addEventListener("timeupdate", () => {
 progressBar.addEventListener("input", () => {
     if (!audioPlayer.duration) return;
 
-    const seekTime = (progressBar.value / 100) * audioPlayer.duration;
+    const seekTime =
+        (progressBar.value / 100) * audioPlayer.duration;
+
     audioPlayer.currentTime = seekTime;
 });
 
@@ -74,7 +76,15 @@ function formatTime(time) {
 
 volumeSlider.addEventListener("input", () => {
     const volume = volumeSlider.value;
+
     audioPlayer.volume = volume / 100;
 
-    volumeValue.textContent = volume + "%";
+    volumeTooltip.textContent = volume + "%";
+
+    volumeTooltip.style.left = volume + "%";
+    volumeTooltip.style.opacity = "1";
+});
+
+volumeSlider.addEventListener("change", () => {
+    volumeTooltip.style.opacity = "0";
 });

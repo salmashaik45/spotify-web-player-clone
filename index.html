@@ -210,12 +210,14 @@
                 <img src="./assets/controls_icon3.png" class="controls-icon3">
                 <img src="./assets/controls_icon4.png" class="controls-icon4">
                 <img src="./assets/controls_icon5.png" class="controls-icon">
-                <input type="range" min="0" max="100" class="control-bar" step="1">
-                <span class="volume-value">50%</span>
+                <div class="volume-container">
+                    <span class="volume-tooltip">50%</span>
+                    <input type="range" min="0" max="100" class="control-bar" step="1">
+                </div>
             </div>
         </div>
     </div>
-    <audio id="audio-player" controls></audio>
+    <audio id="audio-player"></audio>
     <script src="script.js"></script>
 </body>
 </html>
