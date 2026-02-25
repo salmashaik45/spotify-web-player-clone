@@ -6,6 +6,9 @@ const audioPlayer = document.getElementById("audio-player");
 const playButton = document.getElementById("main-play-btn");
 const albumTitle = document.querySelector(".album-title");
 const albumArtist = document.querySelector(".album-info");
+const volumeSlider = document.querySelector(".control-bar");
+audioPlayer.volume = 0.5; 
+volumeSlider.value = 50;    
 let isPlaying = false;
 
 const playIcon = "./assets/player_icon3.png";
@@ -64,3 +67,8 @@ function formatTime(time) {
 
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 }
+
+volumeSlider.addEventListener("input", () => {
+    const volumeValue = volumeSlider.value / 100;
+    audioPlayer.volume = volumeValue;
+});
