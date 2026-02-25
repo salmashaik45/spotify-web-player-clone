@@ -1,6 +1,6 @@
 # 🎧 Spotify Web Player Clone
 
-Music isn’t just something we hear — it’s something we experience.
+Music isn’t just something we hear - it’s something we experience.
 What if you could not only listen to music, but build the player that plays it?
 
 This project started as a simple Spotify UI clone, but I wanted it to feel alive.  
@@ -26,7 +26,7 @@ https://salma-spotify-clone.netlify.app/
 - Drag to seek through the track  
 - Smooth volume control with live percentage feedback  
 
-It’s not just a layout — it behaves like a real music player.
+It’s not just a layout - it behaves like a real music player.
 
 ---
 
@@ -78,3 +78,9 @@ spotify-web-player-clone/
 
 ## 👩‍💻 About Me
 
+I’m Salma, a Computer Science Engineering student graduating in 2027.  
+I love building interactive projects - and music just made this one more fun to create.
+
+---
+
+⭐ If you enjoyed this project, feel free to star the repository!
