@@ -78,7 +78,7 @@ spotify-web-player-clone/
 
 ## 👩‍💻 About Me
 
-I’m Salma, a Computer Science Engineering student graduating in 2027.  
+I’m Salma, a Computer Science Engineering student.  
 I love building interactive projects - and music just made this one more fun to create.
 
 ---
