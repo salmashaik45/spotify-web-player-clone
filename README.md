@@ -76,11 +76,9 @@ spotify-web-player-clone/
     └── screenshot.png  # Preview image for README
 ```
 
-## 👩‍💻 About Me
+## 👩‍💻 Author
 
-I’m Salma, a Computer Science Engineering student.  
-I love building interactive projects - and music just made this one more fun to create.
+Salma Shaik
 
----
+GitHub: https://github.com/salmashaik45
 
-⭐ If you enjoyed this project, feel free to star the repository!
