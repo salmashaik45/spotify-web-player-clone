@@ -78,7 +78,7 @@ spotify-web-player-clone/
 
 ## 👩‍💻 Author
 
-Salma Shaik
+**Salma Shaik**
 
 GitHub: https://github.com/salmashaik45
 
