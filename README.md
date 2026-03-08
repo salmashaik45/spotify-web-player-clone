@@ -80,5 +80,7 @@ spotify-web-player-clone/
 
 **Salma Shaik**
 
+Computer Science and Engineering student
+
 GitHub: https://github.com/salmashaik45
 
